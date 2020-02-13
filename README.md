@@ -55,7 +55,9 @@ yarn start
 # 示例:
 
 `inputdir`:输入图片目录
+
 `outputdir`:输出图片目录
+
 `outputmaxpixels`:输出图片最大像素数
 
 ```shell
