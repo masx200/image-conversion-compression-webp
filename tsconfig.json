@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "pretty": true,
+        "resolveJsonModule": true,
+        "declaration": true,
+        "noUnusedLocals": true,
+        "checkJs": true,
+        "importHelpers": true,
+        "removeComments": true,
+        "allowJs": true,
+        "target": "es2019",
+        "module": "esnext",
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true
+    }
+}
