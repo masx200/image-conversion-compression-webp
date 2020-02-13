@@ -15,8 +15,13 @@ async function iswebp(input) {
         }
     }
     catch (error) {
-        console.log(error);
-        return false;
+        const stdout = error[1];
+        if (stdout.includes("Errors detected.")) {
+            return false;
+        }
+        else {
+            throw error;
+        }
     }
 }
 //# sourceMappingURL=异步限流-is-webp.js.map

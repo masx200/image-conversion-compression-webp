@@ -13,8 +13,13 @@ async function iswebp(input: string) {
             return false;
         }
     } catch (error) {
-        console.log(error);
+        // console.log(error);
+        const stdout = error[1];
+        if (stdout.includes("Errors detected.")) {
+            return false;
+        } else {
+            throw error;
+        }
         // const stderr = execout[1];
-        return false;
     }
 }
