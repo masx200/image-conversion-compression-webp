@@ -20,6 +20,7 @@ async function gmresize(
         console.log(
             JSON.stringify([
                 "图像调整大小",
+                inputfile,
                 { width, height },
                 { width: outwidth, height: outheight }
             ])

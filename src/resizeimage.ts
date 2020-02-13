@@ -14,7 +14,7 @@ export default async function(
     console.log("获取图片像素尺寸", inputfile);
 
     const { width, height } = await getimgsize(inputfile);
-    console.log(["图像大小", inputfile, { width, height }]);
+    console.log(JSON.stringify(["图像大小", inputfile, { width, height }]));
 
     await fsextra.ensureDir(outputdir);
 
@@ -28,7 +28,7 @@ export default async function(
     );
     const outfile = path.join(outputdir, 输入相对路径, outbasename);
     await fsextra.ensureDir(path.dirname(outfile));
-    console.log(["开始写入文件", outfile]);
+    console.log(JSON.stringify(["开始写入文件", outfile]));
 
     await resizewrite(
         inputfile,
@@ -39,5 +39,5 @@ export default async function(
         outputmaxpixels
     );
 
-    console.log(["写入文件完成", outfile]);
+    console.log(JSON.stringify(["写入文件完成", outfile]));
 }
