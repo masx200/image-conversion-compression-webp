@@ -8,7 +8,7 @@
 
 ## 安装依赖
 
-###先安装 `GraphicsMagick`
+### 先安装 `GraphicsMagick`
 
 ```shell
 sudo apt install graphicsmagick
@@ -21,7 +21,7 @@ https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@GraphicsMagick-1.3.3
 
 https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@GraphicsMagick-1.3.34-Q16-win64/GraphicsMagick-1.3.34.tar.xz
 
-###需要安装`libwebp`
+### 需要安装`libwebp`
 
 ```shell
 sudo apt install  libwebp
@@ -36,7 +36,7 @@ https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@libwebp/libwebp-1.0.
 
 https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@libwebp-1.1.0-aarch64/libwebp-1.1.0-aarch64.zip
 
-###安装 `node_modules`
+### 安装 `node_modules`
 
 ```shell
 yarn install
