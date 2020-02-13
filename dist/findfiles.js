@@ -1,6 +1,5 @@
 import find from "find";
-
-function findfiles(pattern: string | RegExp, root: string): Promise<string[]> {
+function findfiles(pattern, root) {
     console.log([pattern, root]);
     return new Promise((s, j) => {
         find.file(pattern, root, files => {
@@ -11,3 +10,4 @@ function findfiles(pattern: string | RegExp, root: string): Promise<string[]> {
     });
 }
 export default findfiles;
+//# sourceMappingURL=findfiles.js.map

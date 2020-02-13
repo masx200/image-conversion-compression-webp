@@ -1,0 +1,1 @@
+{"version":3,"file":"gettempjpgfilepath.js","sourceRoot":"","sources":["../src/gettempjpgfilepath.ts"],"names":[],"mappings":"AAAA,OAAO,IAAI,MAAM,MAAM,CAAC;AACxB,OAAO,MAAM,MAAM,YAAY,CAAC;AAChC,OAAO,EAAE,OAAO,EAAE,MAAM,gBAAgB,CAAC;AACzC,MAAM,UAAU,kBAAkB;IAC9B,OAAO,IAAI,CAAC,OAAO,CAAC,OAAO,EAAE,OAAO,GAAG,MAAM,EAAE,GAAG,MAAM,CAAC,CAAC;AAC9D,CAAC"}

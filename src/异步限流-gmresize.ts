@@ -1,3 +1,6 @@
+import gm from "gm";
+import { wrapasynclimit } from "./wrap-async-function.js";
+
 const { floor, sqrt } = Math;
 export default wrapasynclimit(gmresize);
 
@@ -12,10 +15,19 @@ async function gmresize(
     /* 仅缩小图片 */
     if (outputmaxpixels < width * height && outputmaxpixels > 0) {
         const retio = sqrt(outputmaxpixels / (width * height));
+        const outwidth = floor(width * retio);
+        const outheight = floor(height * retio);
+        console.log(
+            JSON.stringify([
+                "图像调整大小",
+                { width, height },
+                { width: outwidth, height: outheight }
+            ])
+        );
         // '>'; /** Change dimensions only if image is larger than width or height */
         await new Promise((res, rej) => {
             gm(inputfile)
-                .resize(floor(width * retio), floor(height * retio), ">")
+                .resize(outwidth, outheight, ">")
                 .write(outfile, (err: Error | null) => {
                     if (err) {
                         return rej(err);
@@ -26,10 +38,5 @@ async function gmresize(
         });
     } else {
         throw new Error();
-        // await fs.promises.copyFile(inputfile, outfile);
     }
 }
-
-import gm from "gm";
-import { wrapasynclimit } from "./wrap-async-function.js";
-// import fs from "fs";
