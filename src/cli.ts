@@ -4,7 +4,7 @@ import process from "process";
 
 import { start } from "./index.js";
 import { parseargs } from "./parse-args.js";
-const argsobj = parseargs(process.argv);
+const argsobj = parseargs(process.argv.slice(2));
 const { inputdir, outputdir } = argsobj;
 import config from "./image-config.js";
 if (inputdir && outputdir) {
