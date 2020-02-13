@@ -3,7 +3,7 @@
     "type": "module",
     "name": "@masx200/image-conversion-compression-webp",
     "main": "dist/index.js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "types": "dist/index.d.ts",
     "dependencies": {
         "@masx200/async-task-current-limiter": "^1.0.3",
