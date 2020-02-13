@@ -1,5 +1,5 @@
 import execpromise from "./execpromise.js";
-import { getBin } from "./getBin";
+import { getBin } from "./getBin.js";
 import { wrapasynclimit } from "./wrap-async-function.js";
 
 async function img2webp(input: string, output: string) {

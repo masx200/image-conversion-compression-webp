@@ -3,8 +3,8 @@ import os from "os";
 
 import img2webp from "./异步限流-img2webp.js";
 import gmresize from "./异步限流-gmresize.js";
-import { shouldresize } from "./shouldresize";
-import { gettempjpgfilepath } from "./gettempjpgfilepath";
+import { shouldresize } from "./shouldresize.js";
+import { gettempjpgfilepath } from "./gettempjpgfilepath.js";
 export const tempdir = os.tmpdir();
 export default async function(
     inputfile: string,
