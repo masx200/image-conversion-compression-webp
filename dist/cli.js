@@ -11,7 +11,7 @@ if (inputdir && outputdir) {
     if (outputmaxpixels) {
         options.outputmaxpixels = outputmaxpixels;
     }
-    console.log(options);
+    console.log(JSON.stringify(options));
     start(options);
 }
 else {

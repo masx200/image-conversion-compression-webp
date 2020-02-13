@@ -9,6 +9,7 @@ async function gmresize(inputfile, outfile, width, height, outputmaxpixels) {
         const outheight = floor(height * retio);
         console.log(JSON.stringify([
             "图像调整大小",
+            inputfile,
             { width, height },
             { width: outwidth, height: outheight }
         ]));
