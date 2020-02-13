@@ -3,7 +3,8 @@ import getimgsize from "./异步限流-获取图像大小.js";
 
 import resizewrite from "./resize-write.js";
 import fsextra from "fs-extra";
-
+import 异步限流IsWebp from "./异步限流-is-webp.js";
+import fs from "fs";
 export default async function(
     inputfile: string,
     inputdir: string,
@@ -11,6 +12,17 @@ export default async function(
     outputdir: string,
     outputmaxpixels: number
 ): Promise<void> {
+    const iswebp = await 异步限流IsWebp(inputfile);
+    if (iswebp) {
+        console.log("发现图片为webp,但扩展名不正确", "重命名文件", inputfile);
+        const ext = path.extname(inputfile);
+        const 修改扩展名后的路径 = inputfile.replace(
+            new RegExp("\\" + ext),
+            ".webp"
+        );
+        await fs.promises.rename(inputfile, 修改扩展名后的路径);
+        return;
+    }
     console.log("获取图片像素尺寸", inputfile);
 
     const { width, height } = await getimgsize(inputfile);
