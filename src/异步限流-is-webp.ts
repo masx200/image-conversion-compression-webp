@@ -14,7 +14,7 @@ async function iswebp(input: string) {
         }
     } catch (error) {
         console.log(error);
-
+        // const stderr = execout[1];
         return false;
     }
 }
