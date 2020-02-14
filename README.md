@@ -32,7 +32,6 @@ sudo apt install  libwebp
 
 http://downloads.webmproject.org/releases/webp/
 
-https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@libwebp/libwebp-1.1.0-linux-x64.zip
 
 https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@libwebp/libwebp-1.0.1-windows-x64.zip
 
