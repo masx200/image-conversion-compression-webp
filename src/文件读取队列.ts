@@ -10,7 +10,8 @@ export default 文件读取队列;
 
 const asynclimiter = 文件读取队列;
 
-const listener = (data: statusdata) => console.log('文件读取限流'+JSON.stringify(data));
+const listener = (data: statusdata) =>
+    console.log("文件读取限流" + JSON.stringify(data));
 
 asynclimiter.target.on("free", listener);
 
