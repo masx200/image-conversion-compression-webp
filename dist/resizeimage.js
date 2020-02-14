@@ -9,7 +9,7 @@ export default async function (inputfile, inputdir, outputextention, outputdir, 
     if (iswebp) {
         console.log("发现图片为webp,但扩展名不正确", "重命名文件", inputfile);
         const ext = path.extname(inputfile);
-        const 修改扩展名后的路径 = inputfile.replace(new RegExp("\\" + ext), ".webp");
+        const 修改扩展名后的路径 = inputfile.replace(new RegExp("\\" + ext, 'g'), ".webp");
         await fs.promises.rename(inputfile, 修改扩展名后的路径);
         return;
     }

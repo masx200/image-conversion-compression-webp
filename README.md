@@ -30,7 +30,6 @@ sudo apt install  libwebp
 
 或者下载`libwebp`的可执行文件
 
-
 http://downloads.webmproject.org/releases/webp/
 
 https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@libwebp/libwebp-1.1.0-linux-x64.zip
