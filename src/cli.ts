@@ -1,12 +1,13 @@
 #!/usr/bin/env node
-let 同时读取的最大文件数 = 8;
+const argsobj = parseargs(process.argv.slice(2));
+const 同时读取的最大文件数 =Number(argsobj["concurrent"])|| 8;
 export {同时读取的最大文件数}
 import process from "process";
 import config from "./image-config.js";
 import { start } from "./index.js";
 import { parseargs } from "./parse-args.js";
 
-const argsobj = parseargs(process.argv.slice(2));
+
 const { input, output } = argsobj;
 const maxpixels = Number(argsobj["maxpixels"]);
 if (input && output) {
