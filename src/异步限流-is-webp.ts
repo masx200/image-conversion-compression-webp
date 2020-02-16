@@ -13,7 +13,7 @@ async function iswebp(input: string) {
             return false;
         }
     } catch (error) {
-        // console.log(error);
+         console.log(error);
 
         const stdout = error?.stdout;
         if (stdout?.includes?.("Errors detected.")) {
@@ -21,6 +21,6 @@ async function iswebp(input: string) {
         }
         throw error;
 
-        // const stderr = execout[1];
+        
     }
 }
