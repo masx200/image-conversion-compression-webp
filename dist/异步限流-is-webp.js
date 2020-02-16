@@ -16,6 +16,7 @@ async function iswebp(input) {
         }
     }
     catch (error) {
+        console.log(error);
         const stdout = (_a = error) === null || _a === void 0 ? void 0 : _a.stdout;
         if ((_d = (_b = stdout) === null || _b === void 0 ? void 0 : (_c = _b).includes) === null || _d === void 0 ? void 0 : _d.call(_c, "Errors detected.")) {
             return false;
