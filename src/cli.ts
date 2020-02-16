@@ -15,7 +15,7 @@ if (input && output) {
     if (maxpixels) {
         options.maxpixels = maxpixels;
     }
-    console.log(JSON.stringify(options));
+    console.log(JSON.stringify(options,null,4));
     start(options);
 } else {
     console.error("图片转换和压缩到webp ,可设置输出图片最大像素数");
