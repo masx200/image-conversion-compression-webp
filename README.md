@@ -56,17 +56,17 @@ yarn start
 
 # 示例:
 
-必选参数 `inputdir`:输入图片目录 `string`
+必选参数 `input`:输入图片目录 `string`
 
-必选参数 `outputdir`:输出图片目录 `string`
+必选参数 `output`:输出图片目录 `string`
 
-可选参数 `outputmaxpixels`:输出图片最大像素数 `number`
+可选参数 `maxpixels`:输出图片最大像素数 `number`
 
 ```shell
-node ./dist/cli.js --inputdir=D:/baidupandownload/图片输入/ --outputdir=D:/baidupandownload/图片输出/
+node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/
 
 ```
 
 ```shell
-node ./dist/cli.js --inputdir=D:/baidupandownload/图片输入/ --outputdir=D:/baidupandownload/图片输出/ --outputmaxpixels=4000000
+node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/ --maxpixels=4000000
 ```
