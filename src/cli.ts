@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-import argsobj from "./parsed-cli-options.js"
+import argsobj from "./parsed-cli-options.js";
 import process from "process";
 import config from "./image-config.js";
 import { start } from "./index.js";
-
-
 
 const { input, output } = argsobj;
 const maxpixels = Number(argsobj["maxpixels"]);
