@@ -62,7 +62,7 @@ yarn start
 
 可选参数 `maxpixels`:输出图片最大像素数 `number`
 
-可选参数 `concurrent`:同时运行的图片处理进程最大数 `number`
+可选参数 `concurrent`:同时运行的图片处理进程最大值 `number`
 
 ```shell
 node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/
