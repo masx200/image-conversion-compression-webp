@@ -2,7 +2,7 @@ import 创建异步限流队列, {
     statusdata
 } from "@masx200/async-task-current-limiter";
 
-const 同时读取的最大文件数 = 8;
+import { 同时读取的最大文件数} from "./cli.js"
 
 const 图片处理限流 = 创建异步限流队列(同时读取的最大文件数);
 
