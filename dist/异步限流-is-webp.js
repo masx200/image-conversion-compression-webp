@@ -15,7 +15,7 @@ async function iswebp(input) {
         }
     }
     catch (error) {
-        const stdout = error[1];
+        const stdout = error.stdout;
         if (stdout.includes("Errors detected.")) {
             return false;
         }
@@ -24,4 +24,3 @@ async function iswebp(input) {
         }
     }
 }
-//# sourceMappingURL=异步限流-is-webp.js.map

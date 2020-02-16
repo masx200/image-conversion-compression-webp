@@ -6,4 +6,3 @@ const asynclimiter = 文件读取队列;
 const listener = (data) => console.log("文件读取限流" + JSON.stringify(data));
 asynclimiter.target.on("free", listener);
 asynclimiter.target.on("full", listener);
-//# sourceMappingURL=文件读取队列.js.map

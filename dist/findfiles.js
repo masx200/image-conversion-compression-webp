@@ -9,4 +9,3 @@ function findfiles(pattern, root) {
     });
 }
 export default findfiles;
-//# sourceMappingURL=findfiles.js.map

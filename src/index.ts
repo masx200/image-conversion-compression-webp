@@ -27,13 +27,7 @@ async function start(config: IMAGECONFIG) {
     console.log(JSON.stringify(files, null, 4));
     /*读取文件交给GM去做，*/
     files.forEach(async inputfile => {
-        await resizeimage(
-            inputfile,
-            input,
-            outputextention,
-            output,
-            maxpixels
-        );
+        await resizeimage(inputfile, input, outputextention, output, maxpixels);
         finishcount++;
         let 进度 = `${(finishcount / filesum) *
             100}% ${finishcount} / ${filesum} `;

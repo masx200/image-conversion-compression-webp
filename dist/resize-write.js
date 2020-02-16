@@ -16,4 +16,3 @@ export default async function (inputfile, outfile, width, height, outputmaxpixel
         await img2webp(inputfile, outfile);
     }
 }
-//# sourceMappingURL=resize-write.js.map

@@ -54,7 +54,7 @@ yarn build
 yarn start
 ```
 
-# 示例:
+# 命令行示例:
 
 必选参数 `input`:输入图片目录 `string`
 
@@ -62,11 +62,13 @@ yarn start
 
 可选参数 `maxpixels`:输出图片最大像素数 `number`
 
+可选参数 `concurrent`:同时运行的图片处理进程最大数 `number`
+
 ```shell
 node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/
 
 ```
 
 ```shell
-node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/ --maxpixels=4000000
+node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/ --maxpixels=4000000 --concurrent=4
 ```

@@ -1,7 +1,8 @@
 {
+    "include": ["./src/*.ts"],
     "compilerOptions": {
         "outDir": "./dist",
-        "sourceMap": true,
+        "sourceMap": false,
         "moduleResolution": "node",
         "pretty": true,
         "resolveJsonModule": true,

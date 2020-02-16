@@ -14,4 +14,3 @@ function parseargs(args) {
     return 参数obj;
 }
 export { parseargs };
-//# sourceMappingURL=parse-args.js.map

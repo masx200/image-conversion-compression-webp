@@ -31,4 +31,3 @@ async function gmresize(inputfile, outfile, width, height, outputmaxpixels) {
         throw new Error();
     }
 }
-//# sourceMappingURL=异步限流-gmresize.js.map

@@ -4,4 +4,3 @@ import { tempdir } from "./resize-write.js";
 export function gettempjpgfilepath() {
     return path.resolve(tempdir, "temp-" + uuidv4() + ".jpg");
 }
-//# sourceMappingURL=gettempjpgfilepath.js.map

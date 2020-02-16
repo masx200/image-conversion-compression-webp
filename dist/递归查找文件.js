@@ -7,4 +7,3 @@ export default async function 递归查找图片(extention, inputdir) {
     await fsextra.ensureDir(dirpath);
     return findfiles(extreg, dirpath);
 }
-//# sourceMappingURL=递归查找文件.js.map
