@@ -13,14 +13,14 @@ export { start };
 async function start(config: IMAGECONFIG) {
     const {
         inputextentions,
-        inputdir,
-        outputdir,
+        input,
+        output,
         outputextention,
-        outputmaxpixels
+        maxpixels
     } = config;
 
-    console.log("递归查找图片...", inputdir);
-    const files = await 递归查找图片(inputextentions, inputdir);
+    console.log("递归查找图片...", input);
+    const files = await 递归查找图片(inputextentions, input);
 
     filesum = files.length;
     console.log("找到图片文件" + files.length + "个");
@@ -29,10 +29,10 @@ async function start(config: IMAGECONFIG) {
     files.forEach(async inputfile => {
         await resizeimage(
             inputfile,
-            inputdir,
+            input,
             outputextention,
-            outputdir,
-            outputmaxpixels
+            output,
+            maxpixels
         );
         finishcount++;
         let 进度 = `${(finishcount / filesum) *
