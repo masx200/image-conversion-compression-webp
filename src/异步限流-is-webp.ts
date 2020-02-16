@@ -6,7 +6,7 @@ async function iswebp(input: string) {
     try {
         let execout = await execpromise(getBin("webpinfo"), [input]);
         console.log(execout);
-        const stdout = execout[0];
+        const stdout = execout.stdout;
         if (stdout.includes(`No error detected.`)) {
             return true;
         } else {
@@ -14,12 +14,13 @@ async function iswebp(input: string) {
         }
     } catch (error) {
         // console.log(error);
-        const stdout = error.stdout;
-        if (stdout.includes("Errors detected.")) {
+
+        const stdout = error?.stdout;
+        if (stdout?.includes?.("Errors detected.")) {
             return false;
-        } else {
-            throw error;
         }
+        throw error;
+
         // const stderr = execout[1];
     }
 }
