@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-// export { 同时读取的最大文件数 };
+import argsobj from "./parsed-cli-options.js"
 import process from "process";
 import config from "./image-config.js";
 import { start } from "./index.js";
-import { parseargs } from "./parse-args.js";
-const argsobj = parseargs(process.argv.slice(2));
 
-// export { 图片处理限流 };
+
 
 const { input, output } = argsobj;
 const maxpixels = Number(argsobj["maxpixels"]);
