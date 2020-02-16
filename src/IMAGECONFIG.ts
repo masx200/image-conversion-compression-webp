@@ -1,8 +1,8 @@
 interface IMAGECONFIG {
     inputextentions: string[];
-    inputdir: string;
-    outputdir: string;
+    input: string;
+    output: string;
     outputextention: string;
-    outputmaxpixels: number;
+    maxpixels: number;
 }
 export default IMAGECONFIG;
