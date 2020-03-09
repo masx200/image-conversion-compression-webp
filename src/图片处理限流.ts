@@ -1,6 +1,6 @@
 import argsobj from "./parsed-cli-options.js";
 import 创建异步限流队列, {
-    statusdata
+//    statusdata
 } from "@masx200/async-task-current-limiter";
 
 const 同时读取的最大文件数 = Number(argsobj["concurrent"]) || 8;
