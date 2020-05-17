@@ -32,6 +32,8 @@ sudo apt install  libwebp
 
 http://downloads.webmproject.org/releases/webp/
 
+http://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.1.0-windows-x64.zip
+
 https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@libwebp/libwebp-1.0.1-windows-x64.zip
 
 https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@libwebp-1.1.0-aarch64/libwebp-1.1.0-aarch64.zip
@@ -71,4 +73,9 @@ node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupa
 
 ```shell
 node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/ --maxpixels=4000000 --concurrent=4
+```
+
+
+```
+npx @masx200/image-conversion-compression-webp --input=C:\Pictures\2020年5月17日\图片 --output=C:\Pictures\2020年5月17日\图片
 ```
