@@ -1,5 +1,4 @@
-import 创建异步限流队列 from //    statusdata
-"@masx200/async-task-current-limiter";
+import 创建异步限流队列 from "@masx200/async-task-current-limiter"; //    statusdata
 
 const 同时读取的最大文件数 = 20;
 

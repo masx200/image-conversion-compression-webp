@@ -6,8 +6,7 @@ async function getimgsize(filename) {
         gm(filename).size((e, dimensions) => {
             if (e) {
                 return j(e);
-            }
-            else {
+            } else {
                 return s(dimensions);
             }
         });

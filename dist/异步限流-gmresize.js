@@ -8,26 +8,26 @@ async function gmresize(inputfile, outfile, width, height, outputmaxpixels) {
         const retio = sqrt(outputmaxpixels / (width * height));
         const outwidth = floor(width * retio);
         const outheight = floor(height * retio);
-        console.log(JSON.stringify([
-            "图像调整大小",
-            inputfile,
-            { width, height },
-            { width: outwidth, height: outheight }
-        ]));
+        console.log(
+            JSON.stringify([
+                "图像调整大小",
+                inputfile,
+                { width, height },
+                { width: outwidth, height: outheight }
+            ])
+        );
         await new Promise((res, rej) => {
             gm(inputfile)
                 .resize(outwidth, outheight, ">")
-                .write(outfile, (err) => {
-                if (err) {
-                    return rej(err);
-                }
-                else {
-                    return res();
-                }
-            });
+                .write(outfile, err => {
+                    if (err) {
+                        return rej(err);
+                    } else {
+                        return res();
+                    }
+                });
         });
-    }
-    else {
+    } else {
         throw new Error();
     }
 }

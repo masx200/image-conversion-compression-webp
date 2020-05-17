@@ -14,12 +14,15 @@ if (input && output) {
     Promise.resolve().then(() => {
         start(options);
     });
-}
-else {
+} else {
     console.error("图片转换和压缩到webp ,可设置输出图片最大像素数");
     console.error("示例:");
-    console.error(`node ./dist/cli.js --input=D:/baidupandownload/图片输入/  --output=D:/baidupandownload/图片输出/`);
-    console.error(`node ./dist/cli.js --input=D:/baidupandownload/图片输入/  --output=D:/baidupandownload/图片输出/ --maxpixels=4000000 --concurrent=4`);
+    console.error(
+        `node ./dist/cli.js --input=D:/baidupandownload/图片输入/  --output=D:/baidupandownload/图片输出/`
+    );
+    console.error(
+        `node ./dist/cli.js --input=D:/baidupandownload/图片输入/  --output=D:/baidupandownload/图片输出/ --maxpixels=4000000 --concurrent=4`
+    );
     console.error("输入的参数有误!");
     process.exit(1);
 }

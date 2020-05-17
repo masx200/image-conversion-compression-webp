@@ -4,12 +4,21 @@ import resizewrite from "./resize-write.js";
 import fsextra from "fs-extra";
 import 异步限流IsWebp from "./异步限流-is-webp.js";
 import fs from "fs";
-export default async function (inputfile, inputdir, outputextention, outputdir, outputmaxpixels) {
+export default async function(
+    inputfile,
+    inputdir,
+    outputextention,
+    outputdir,
+    outputmaxpixels
+) {
     const iswebp = await 异步限流IsWebp(inputfile);
     if (iswebp) {
         console.log("发现图片为webp,但扩展名不正确", "重命名文件", inputfile);
         const ext = path.extname(inputfile);
-        const 修改扩展名后的路径 = inputfile.replace(new RegExp("\\" + ext, "g"), ".webp");
+        const 修改扩展名后的路径 = inputfile.replace(
+            new RegExp("\\" + ext, "g"),
+            ".webp"
+        );
         await fs.promises.rename(inputfile, 修改扩展名后的路径);
         return;
     }
@@ -17,11 +26,14 @@ export default async function (inputfile, inputdir, outputextention, outputdir, 
     const { width, height } = await getimgsize(inputfile);
     console.log(JSON.stringify(["图像大小", inputfile, { width, height }]));
     await fsextra.ensureDir(outputdir);
-    const outbasename = path.basename(inputfile, path.extname(inputfile)) +
+    const outbasename =
+        path.basename(inputfile, path.extname(inputfile)) +
         "-" +
         "." +
         outputextention;
-    const 输入相对路径 = path.dirname(inputfile.slice(path.resolve(inputdir).length + 1));
+    const 输入相对路径 = path.dirname(
+        inputfile.slice(path.resolve(inputdir).length + 1)
+    );
     const outfile = path.join(outputdir, 输入相对路径, outbasename);
     await fsextra.ensureDir(path.dirname(outfile));
     console.log(JSON.stringify(["开始写入文件", outfile]));
