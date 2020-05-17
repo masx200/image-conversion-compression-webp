@@ -1,4 +1,5 @@
 {
+    "bin":"./dist/cli.js",
     "module": "dist/index.js",
     "type": "module",
     "name": "@masx200/image-conversion-compression-webp",
