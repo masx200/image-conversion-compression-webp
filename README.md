@@ -42,6 +42,10 @@ https://cdn.jsdelivr.net/gh/masx200/long-image-split-square@libwebp-1.1.0-aarch6
 
 ### 安装 `node_modules`
 
+```
+yarn add @masx200/image-conversion-compression-webp
+```
+
 ```shell
 yarn install
 ```
@@ -60,13 +64,13 @@ yarn start
 
 # 命令行示例:
 
-必选参数 `input`:输入图片目录 `string`
+必选参数 `input`:类型 `string`,输入图片目录
 
-必选参数 `output`:输出图片目录 `string`
+必选参数 `output`:类型`string`,输出图片目录
 
-可选参数 `maxpixels`:输出图片最大像素数 `number`
+可选参数 `maxpixels`:类型`number`,输出图片最大像素数
 
-可选参数 `concurrent`:同时运行的图片处理进程最大值 `number`
+可选参数 `concurrent`:类型`number`,同时运行的图片处理进程最大值
 
 ```shell
 node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/
@@ -76,7 +80,6 @@ node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupa
 ```shell
 node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/ --maxpixels=4000000 --concurrent=4
 ```
-
 
 ```
 npx @masx200/image-conversion-compression-webp --input=C:\Pictures\2020年5月17日\图片 --output=C:\Pictures\2020年5月17日\图片
