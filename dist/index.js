@@ -21,12 +21,12 @@ async function start(config) {
     filesum = files.length;
     console.log("找到图片文件" + files.length + "个");
     console.log(JSON.stringify(files, null, 4));
-    files.forEach(async inputfile => {
+  await Promise.all(  files.forEach(async inputfile => {
         await resizeimage(inputfile, input, outputextention, output, maxpixels);
         finishcount++;
         let 进度 = `${(finishcount / filesum) *
             100}% ${finishcount} / ${filesum} `;
         process.title = 进度;
         console.log("processing: " + 进度);
-    });
+    }));
 }
