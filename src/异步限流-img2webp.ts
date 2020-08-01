@@ -11,7 +11,7 @@ async function img2webp(input: string, output: string) {
         output,
         "-v",
         "--",
-        input
+        input,
     ]);
     return execout;
 }

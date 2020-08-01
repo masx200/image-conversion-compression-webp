@@ -23,7 +23,7 @@ async function gmresize(
                 "图像调整大小",
                 inputfile,
                 { width, height },
-                { width: outwidth, height: outheight }
+                { width: outwidth, height: outheight },
             ])
         );
         // '>'; /** Change dimensions only if image is larger than width or height */

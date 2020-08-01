@@ -5,7 +5,7 @@ import resizewrite from "./resize-write.js";
 import fsextra from "fs-extra";
 import 异步限流IsWebp from "./异步限流-is-webp.js";
 import fs from "fs";
-export default async function(
+export default async function (
     inputfile: string,
     inputdir: string,
     outputextention: string,

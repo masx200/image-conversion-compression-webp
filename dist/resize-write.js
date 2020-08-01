@@ -5,7 +5,7 @@ import gmresize from "./异步限流-gmresize.js";
 import { shouldresize } from "./shouldresize.js";
 import { gettempjpgfilepath } from "./gettempjpgfilepath.js";
 export const tempdir = os.tmpdir();
-export default async function(
+export default async function (
     inputfile,
     outfile,
     width,

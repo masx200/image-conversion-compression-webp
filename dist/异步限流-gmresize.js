@@ -13,13 +13,13 @@ async function gmresize(inputfile, outfile, width, height, outputmaxpixels) {
                 "图像调整大小",
                 inputfile,
                 { width, height },
-                { width: outwidth, height: outheight }
+                { width: outwidth, height: outheight },
             ])
         );
         await new Promise((res, rej) => {
             gm(inputfile)
                 .resize(outwidth, outheight, ">")
-                .write(outfile, err => {
+                .write(outfile, (err) => {
                     if (err) {
                         return rej(err);
                     } else {

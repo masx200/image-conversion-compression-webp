@@ -9,7 +9,7 @@ async function img2webp(input, output) {
         output,
         "-v",
         "--",
-        input
+        input,
     ]);
     return execout;
 }

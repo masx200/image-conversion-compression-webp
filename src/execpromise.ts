@@ -7,12 +7,12 @@ export interface EXECERROR {
     stderr: string;
 }
 
-export default function(
+export default function (
     cmd: string,
     args: string[]
 ): Promise<{ stdout: string; stderr: string }> {
     return new Promise((res, rej) => {
-        execFile(cmd, args, function(
+        execFile(cmd, args, function (
             error: child_process.ExecException | null,
             stdout,
             stderr

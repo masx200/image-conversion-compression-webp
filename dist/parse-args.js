@@ -1,8 +1,8 @@
 function parseargs(args) {
     const 参数obj = {};
-    args.filter(s => s.startsWith("--"))
-        .map(s => /--(?<key>.+)=(?<value>.+)/g.exec(s))
-        .forEach(execArray => {
+    args.filter((s) => s.startsWith("--"))
+        .map((s) => /--(?<key>.+)=(?<value>.+)/g.exec(s))
+        .forEach((execArray) => {
             const groups =
                 execArray === null || execArray === void 0
                     ? void 0
