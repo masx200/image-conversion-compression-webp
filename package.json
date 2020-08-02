@@ -10,9 +10,9 @@
     "version": "1.0.6",
     "types": "dist/index.d.ts",
     "devDependencies": {
-        "prettier": "^1.19.1",
+        "prettier": "^2.0.5",
         "tslib": "^1.10.0",
-        "typescript": "^3.8.3"
+        "typescript": "^3.9.7"
     },
     "dependencies": {
         "@masx200/async-task-current-limiter": "^1.0.7",
