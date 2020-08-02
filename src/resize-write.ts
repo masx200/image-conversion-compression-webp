@@ -16,10 +16,19 @@ export default async function (
     outputmaxpixels: number
 ): Promise<void> {
     if (shouldresize(width, height, outputmaxpixels)) {
+
+try{
         const tempname1 = gettempjpgfilepath();
         await gmresize(inputfile, tempname1, width, height, outputmaxpixels);
         await img2webp(tempname1, outfile);
+
+}
+catch(e){}
+
+finally{
         await fs.promises.unlink(tempname1);
+}
+
     } else {
         await img2webp(inputfile, outfile);
     }
