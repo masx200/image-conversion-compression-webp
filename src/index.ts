@@ -68,6 +68,7 @@ finishcount++;
 catch(e){
 
 failcount++
+console.error(e)
 }
 let 进度 = `${
                 (finishcount / filesum) * 100
