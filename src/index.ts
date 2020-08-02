@@ -104,6 +104,7 @@ return
 
 
 }
+else{
 await Promise.all(
         files.map(async (inputfile) => {
 try{
@@ -135,4 +136,4 @@ process.title = 进度;
             
         })
     );
-}
+}}
