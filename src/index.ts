@@ -112,7 +112,9 @@ async function handleconvert(
                         (finishcount / filesum) * 100
                     }% ${finishcount} / ${filesum} ` +
                     "failure : " +
-                    failcount+"/"+filesum;
+                    failcount +
+                    "/" +
+                    filesum;
 
                 process.title = 进度;
                 console.log(进度);
