@@ -5,7 +5,7 @@ export interface EXECERROR {
     stdout: string;
     stderr: string;
 }
-export default function (cmd: string, args: string[]): Promise<{
+export default function execpromise(cmd: string, args: string[]): Promise<{
     stdout: string;
     stderr: string;
 }>;
