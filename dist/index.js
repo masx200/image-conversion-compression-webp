@@ -80,7 +80,7 @@ async function handleconvert(files, input, outputextention, output, maxpixels) {
                         (finishcount / filesum) * 100
                     }% ${finishcount} / ${filesum} ` +
                     "failure : " +
-                    failcount;
+                    failcount+"/"+filesum;
                 process.title = 进度;
                 console.log(进度);
             })
