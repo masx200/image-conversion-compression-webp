@@ -45,3 +45,17 @@ async function start(config: IMAGECONFIG) {
         })
     );
 }
+
+
+
+async function handleconvert(files,
+
+
+inputfile,
+                input,
+                outputextention,
+                output,
+                maxpixels){
+
+
+}
