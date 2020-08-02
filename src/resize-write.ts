@@ -23,7 +23,14 @@ try{
         await img2webp(tempname1, outfile);
 
 }
-catch(e){}
+catch(e){
+
+
+
+console.error(e)
+
+
+}
 
 finally{
         await fs.promises.unlink(tempname1);
