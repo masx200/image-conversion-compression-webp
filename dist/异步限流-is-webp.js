@@ -10,14 +10,20 @@ async function iswebp(input) {
         const stdout = execout.stdout;
         if (stdout.includes(`No error detected.`)) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
-    }
-    catch (error) {
-        const stdout = error === null || error === void 0 ? void 0 : error.stdout;
-        if ((_a = stdout === null || stdout === void 0 ? void 0 : stdout.includes) === null || _a === void 0 ? void 0 : _a.call(stdout, "Errors detected.")) {
+    } catch (error) {
+        const stdout =
+            error === null || error === void 0 ? void 0 : error.stdout;
+        if (
+            (_a =
+                stdout === null || stdout === void 0
+                    ? void 0
+                    : stdout.includes) === null || _a === void 0
+                ? void 0
+                : _a.call(stdout, "Errors detected.")
+        ) {
             return false;
         }
         throw error;
