@@ -18,7 +18,7 @@ export default function (
             stderr
         ) {
             if (error) {
-                return rej({ error, stdout, stderr });
+                return rej(Object.assign(new Error(),{ error, stdout, stderr }));
             } else {
                 /*有的程序会往标准错误输出里写入*/
                 return res({ stdout, stderr });
