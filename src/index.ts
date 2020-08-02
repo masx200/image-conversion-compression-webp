@@ -39,6 +39,19 @@ async function start(config: IMAGECONFIG) {
                 outputextention,
                 output,
                 maxpixels)
+
+
+
+if(failurefiles.length){
+
+console.error("处理失败的文件：",JSON.stringify(failurefiles, null, 4))
+}
+else{
+console.log("处理全部成功!")
+
+}
+
+
 }
 
 
