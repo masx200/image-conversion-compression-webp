@@ -16,6 +16,7 @@ let failcount=0
 const failurefiles=[]
 export { start };
 async function start(config: IMAGECONFIG) {
+console.log(config)
     const {
         inputextentions,
         input,
