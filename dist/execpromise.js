@@ -4,9 +4,13 @@ export default function (cmd, args) {
     return new Promise((res, rej) => {
         execFile(cmd, args, function (error, stdout, stderr) {
             if (error) {
-               return rej(Object.assign(new Error(String(error)),{ error, stdout, stderr }));
-        
-
+                return rej(
+                    Object.assign(new Error(String(error)), {
+                        error,
+                        stdout,
+                        stderr,
+                    })
+                );
             } else {
                 return res({ stdout, stderr });
             }

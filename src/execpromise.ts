@@ -18,7 +18,13 @@ export default function (
             stderr
         ) {
             if (error) {
-                return rej(Object.assign(new Error(String(error)),{ error, stdout, stderr }));
+                return rej(
+                    Object.assign(new Error(String(error)), {
+                        error,
+                        stdout,
+                        stderr,
+                    })
+                );
             } else {
                 /*有的程序会往标准错误输出里写入*/
                 return res({ stdout, stderr });

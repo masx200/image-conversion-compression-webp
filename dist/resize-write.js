@@ -5,7 +5,7 @@ import gmresize from "./异步限流-gmresize.js";
 import { shouldresize } from "./shouldresize.js";
 import { gettempjpgfilepath } from "./gettempjpgfilepath.js";
 export const tempdir = os.tmpdir();
-export default async function (
+export default async function resizewrite(
     inputfile,
     outfile,
     width,
@@ -14,9 +14,21 @@ export default async function (
 ) {
     if (shouldresize(width, height, outputmaxpixels)) {
         const tempname1 = gettempjpgfilepath();
-        await gmresize(inputfile, tempname1, width, height, outputmaxpixels);
-        await img2webp(tempname1, outfile);
-        await fs.promises.unlink(tempname1);
+        try {
+            await gmresize(
+                inputfile,
+                tempname1,
+                width,
+                height,
+                outputmaxpixels
+            );
+            await img2webp(tempname1, outfile);
+        } catch (e) {
+            console.error(e);
+            return Promise.reject(e);
+        } finally {
+            await fs.promises.unlink(tempname1);
+        }
     } else {
         await img2webp(inputfile, outfile);
     }
