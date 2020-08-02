@@ -55,7 +55,7 @@ console.log("处理全部成功!")
 }
 
 
-
+const slicecount=500
 async function handleconvert(files,
 
 
@@ -64,7 +64,19 @@ async function handleconvert(files,
                 outputextention,
                 output,
                 maxpixels){
+//拆分成几百个文件依次处理
 
+if(!files.length){
+
+return
+
+}
+
+else if(files.length>slicecount){
+
+
+
+}
 await Promise.all(
         files.map(async (inputfile) => {
 try{
