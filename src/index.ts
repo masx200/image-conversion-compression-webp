@@ -12,6 +12,8 @@ let finishcount = 0;
 
 let failcount=0
 
+
+const failurefiles=[]
 export { start };
 async function start(config: IMAGECONFIG) {
     const {
@@ -68,6 +70,8 @@ finishcount++;
 catch(e){
 
 failcount++
+
+failurefiles.push(inputfile)
 console.error(e)
 }
 let 进度 = "processing: " +`success : ${
