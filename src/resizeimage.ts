@@ -5,7 +5,7 @@ import resizewrite from "./resize-write.js";
 import fsextra from "fs-extra";
 import 异步限流IsWebp from "./异步限流-is-webp.js";
 import fs from "fs";
-export default async function (
+export default async function resizeimage(
     inputfile: string,
     inputdir: string,
     outputextention: string,
@@ -14,13 +14,14 @@ export default async function (
 ): Promise<void> {
     const iswebp = await 异步限流IsWebp(inputfile);
     if (iswebp) {
-        console.log("发现图片为webp,但扩展名不正确", "重命名文件", inputfile);
         const ext = path.extname(inputfile);
         /* ext '.jpg' */
         const 修改扩展名后的路径 = inputfile.replace(
             new RegExp("\\" + ext, "g"),
             ".webp"
         );
+
+        console.log("发现图片为webp,但扩展名不正确", "重命名文件", inputfile,修改扩展名后的路径);
         await fs.promises.rename(inputfile, 修改扩展名后的路径);
         return;
     }
