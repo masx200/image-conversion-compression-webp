@@ -9,6 +9,9 @@ process.on("unhandledRejection", (err) => {
 });
 let filesum = 0;
 let finishcount = 0;
+
+let failcount=0
+
 export { start };
 async function start(config: IMAGECONFIG) {
     const {
@@ -49,6 +52,7 @@ async function handleconvert(files,
 
 await Promise.all(
         files.map(async (inputfile) => {
+try{
             await resizeimage(
                 inputfile,
                 input,
@@ -56,13 +60,22 @@ await Promise.all(
                 output,
                 maxpixels
             );
-            finishcount++;
-            let 进度 = `${
+finishcount++;
+            
+            
+}
+
+catch(e){
+
+failcount++
+}
+let 进度 = `${
                 (finishcount / filesum) * 100
             }% ${finishcount} / ${filesum} `;
 
-            process.title = 进度;
+process.title = 进度;
             console.log("processing: " + 进度);
+            
         })
     );
 }
