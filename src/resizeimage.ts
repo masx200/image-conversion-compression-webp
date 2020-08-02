@@ -25,6 +25,8 @@ export default async function resizeimage(
         await fs.promises.rename(inputfile, 修改扩展名后的路径);
         return;
     }
+else
+{
     console.log("获取图片像素尺寸", inputfile);
 
     const { width, height } = await getimgsize(inputfile);
@@ -54,4 +56,4 @@ export default async function resizeimage(
     );
 
     console.log(JSON.stringify(["写入文件完成", outfile]));
-}
+}}
