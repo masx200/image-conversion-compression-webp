@@ -70,12 +70,12 @@ catch(e){
 failcount++
 console.error(e)
 }
-let 进度 = `${
+let 进度 = "processing: " +`success : ${
                 (finishcount / filesum) * 100
-            }% ${finishcount} / ${filesum} `;
+            }% ${finishcount} / ${filesum} `+"failure : "+failcount;
 
 process.title = 进度;
-            console.log("processing: " + 进度);
+            console.log( 进度);
             
         })
     );
