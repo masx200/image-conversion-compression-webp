@@ -74,6 +74,33 @@ return
 
 else if(files.length>slicecount){
 
+const workfiles=files.slice(0,slicecount)
+const restfiles=files.slice(slicecount)
+
+await handleconvert(workfiles,
+
+
+
+                input,
+                outputextention,
+                output,
+                maxpixels)
+
+
+
+
+await handleconvert(restfiles,
+
+
+
+                input,
+                outputextention,
+                output,
+                maxpixels)
+
+
+
+return
 
 
 }
