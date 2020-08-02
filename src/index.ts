@@ -26,7 +26,28 @@ async function start(config: IMAGECONFIG) {
     console.log("找到图片文件" + files.length + "个");
     console.log(JSON.stringify(files, null, 4));
     /*读取文件交给GM去做，*/
-    await Promise.all(
+   await handleconvert(files,
+
+
+
+                input,
+                outputextention,
+                output,
+                maxpixels)
+}
+
+
+
+async function handleconvert(files,
+
+
+
+                input,
+                outputextention,
+                output,
+                maxpixels){
+
+await Promise.all(
         files.map(async (inputfile) => {
             await resizeimage(
                 inputfile,
@@ -44,18 +65,4 @@ async function start(config: IMAGECONFIG) {
             console.log("processing: " + 进度);
         })
     );
-}
-
-
-
-async function handleconvert(files,
-
-
-
-                input,
-                outputextention,
-                output,
-                maxpixels){
-
-
 }
