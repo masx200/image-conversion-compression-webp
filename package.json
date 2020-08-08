@@ -7,7 +7,7 @@
     "type": "module",
     "name": "@masx200/image-conversion-compression-webp",
     "main": "dist/index.js",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "types": "dist/index.d.ts",
     "devDependencies": {
         "prettier": "^2.0.5",
@@ -15,7 +15,7 @@
         "typescript": "^3.9.7"
     },
     "dependencies": {
-        "@masx200/async-task-current-limiter": "^1.0.8",
+        "@masx200/async-task-current-limiter": "^1.0.9",
         "@types/find": "^0.2.1",
         "@types/fs-extra": "^8.0.1",
         "@types/gm": "^1.18.7",
