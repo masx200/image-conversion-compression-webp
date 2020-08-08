@@ -12,7 +12,7 @@
         "importHelpers": true,
         "removeComments": true,
         "allowJs": true,
-        "target": "es2019",
+        "target": "esnext",
         "module": "esnext",
         "strict": true,
         "noImplicitReturns": true,
