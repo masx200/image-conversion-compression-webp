@@ -22,6 +22,7 @@ async function start(config) {
     console.log("递归查找图片...", input);
     const files = await 递归查找图片(inputextentions, input);
     filesum = files.length;
+    files.sort();
     console.log("找到图片文件" + files.length + "个");
     console.log(JSON.stringify(files, null, 4));
     failurefiles.length = 0;
