@@ -30,9 +30,9 @@
     "@types/node" "*"
 
 "@types/gm@^1.18.7":
-  version "1.18.9"
-  resolved "https://registry.yarnpkg.com/@types/gm/-/gm-1.18.9.tgz#32024de48ac911befe456647989451d18eaf4bcc"
-  integrity sha512-b7ybB60YvNQzYauJs1ufviskjWvWRO3MizlU/4RAts77z4HzDbN3OMGAneQnrot0S28EMdNRo98epRUJ/orofQ==
+  version "1.18.11"
+  resolved "https://registry.yarnpkg.com/@types/gm/-/gm-1.18.11.tgz#45dbb7fca90c5bb06ff921ae0096c4f8e5eb539c"
+  integrity sha512-qp8QT2nHRgMIbuzy30ITsr63jA9k4Qt4RP+/2+fF+0QIulym/Qif+B5nETz8oYpHeG43p5OvW5tYzxBZgCozVA==
   dependencies:
     "@types/node" "*"
 
