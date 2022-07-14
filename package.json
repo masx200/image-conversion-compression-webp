@@ -15,7 +15,7 @@
         "typescript": "^4.6.4"
     },
     "dependencies": {
-        "@masx200/async-task-current-limiter": "^2.0.1",
+        "@masx200/async-task-current-limiter": "^2.1.0",
         "@types/find": "^0.2.1",
         "@types/fs-extra": "^9.0.13",
         "@types/gm": "^1.18.7",
