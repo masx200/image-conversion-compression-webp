@@ -7,7 +7,7 @@
     "type": "module",
     "name": "@masx200/image-conversion-compression-webp",
     "main": "dist/index.js",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "types": "dist/index.d.ts",
     "devDependencies": {
         "prettier": "^2.0.5",
