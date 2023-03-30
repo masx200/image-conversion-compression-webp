@@ -3,7 +3,7 @@ import IMAGECONFIG from "./IMAGECONFIG.js";
 import resizeimage from "./resizeimage.js";
 import 递归查找图片 from "./递归查找文件.js";
 
-"use strict";
+("use strict");
 process.on("unhandledRejection", (err) => {
     throw err;
 });
@@ -16,13 +16,8 @@ const failurefiles: string[] = [];
 export { start };
 async function start(config: IMAGECONFIG) {
     console.log(config);
-    const {
-        inputextentions,
-        input,
-        output,
-        outputextention,
-        maxpixels,
-    } = config;
+    const { inputextentions, input, output, outputextention, maxpixels } =
+        config;
 
     console.log("递归查找图片...", input);
     const files = await 递归查找图片(inputextentions, input);

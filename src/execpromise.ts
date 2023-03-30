@@ -12,23 +12,27 @@ export default function execpromise(
     args: string[]
 ): Promise<{ stdout: string; stderr: string }> {
     return new Promise((res, rej) => {
-        execFile(cmd, args, function (
-            error: child_process.ExecException | null,
-            stdout,
-            stderr
-        ) {
-            if (error) {
-                return rej(
-                    Object.assign(new Error(String(error)), {
-                        error,
-                        stdout,
-                        stderr,
-                    })
-                );
-            } else {
-                /*有的程序会往标准错误输出里写入*/
-                return res({ stdout, stderr });
+        execFile(
+            cmd,
+            args,
+            function (
+                error: child_process.ExecException | null,
+                stdout,
+                stderr
+            ) {
+                if (error) {
+                    return rej(
+                        Object.assign(new Error(String(error)), {
+                            error,
+                            stdout,
+                            stderr,
+                        })
+                    );
+                } else {
+                    /*有的程序会往标准错误输出里写入*/
+                    return res({ stdout, stderr });
+                }
             }
-        });
+        );
     });
 }

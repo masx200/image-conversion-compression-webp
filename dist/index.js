@@ -12,13 +12,8 @@ const failurefiles = [];
 export { start };
 async function start(config) {
     console.log(config);
-    const {
-        inputextentions,
-        input,
-        output,
-        outputextention,
-        maxpixels,
-    } = config;
+    const { inputextentions, input, output, outputextention, maxpixels } =
+        config;
     console.log("递归查找图片...", input);
     const files = await 递归查找图片(inputextentions, input);
     filesum = files.length;

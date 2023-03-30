@@ -3,4 +3,5 @@ export default {
 
     outputextention: "webp",
     maxpixels: 6000000,
+    concurrent: 8,
 };

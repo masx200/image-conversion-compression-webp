@@ -27,7 +27,7 @@ async function gmresize(
             ])
         );
         // '>'; /** Change dimensions only if image is larger than width or height */
-        await new Promise((res, rej) => {
+        await new Promise<void>((res, rej) => {
             gm(inputfile)
                 .resize(outwidth, outheight, ">")
                 .write(outfile, (err: Error | null) => {

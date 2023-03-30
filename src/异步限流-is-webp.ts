@@ -14,7 +14,7 @@ async function iswebp(input: string) {
         }
     } catch (error) {
         // console.error(error);
-
+        //@ts-ignore
         const stdout = error?.stdout;
         if (stdout?.includes?.("Errors detected.")) {
             return false;
