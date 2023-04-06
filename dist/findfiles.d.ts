@@ -1,5 +1,2 @@
-declare function findfiles(
-    pattern: string | RegExp,
-    root: string
-): Promise<string[]>;
+declare function findfiles(pattern: string | RegExp, root: string): Promise<string[]>;
 export default findfiles;

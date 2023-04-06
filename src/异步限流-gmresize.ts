@@ -1,6 +1,8 @@
 import gm from "gm";
-// import { wrapasynclimit } from "./wrap-async-function.js";
 import 图片处理限流 from "./图片处理限流.js";
+
+// import { wrapasynclimit } from "./wrap-async-function.js";
+
 const { floor, sqrt } = Math;
 const { asyncwrap } = 图片处理限流;
 export default asyncwrap(gmresize);
