@@ -9,12 +9,10 @@ async function iswebp(input) {
         const stdout = execout.stdout;
         if (stdout.includes(`No error detected.`)) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
-    }
-    catch (error) {
+    } catch (error) {
         const stdout = error?.stdout;
         if (stdout?.includes?.("Errors detected.")) {
             return false;
