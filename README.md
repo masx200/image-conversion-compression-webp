@@ -72,6 +72,8 @@ yarn start
 
 可选参数 `concurrent`:类型`number`,同时运行的图片处理进程最大值
 
+可选参数 `inputextentions`:类型`string`,输入的文件扩展名,使用逗号分隔
+
 ```shell
 node ./dist/cli.js --input=D:/baidupandownload/图片输入/ --output=D:/baidupandownload/图片输出/
 

@@ -1,6 +1,6 @@
 export default {
-    inputextentions: ["jpg", "png", "jpeg", "bmp", "gif"],
+    inputextentions: ["jpg", "png", "jpeg", "bmp", "gif", "heic"],
     outputextention: "webp",
-    maxpixels: 6000000,
+    maxpixels: 8000000,
     concurrent: 8,
 };
