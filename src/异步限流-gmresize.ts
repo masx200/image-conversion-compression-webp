@@ -13,7 +13,7 @@ async function gmresize(
 
     width: number,
     height: number,
-    outputmaxpixels: number
+    outputmaxpixels: number,
 ) {
     /* 仅缩小图片 */
     if (outputmaxpixels < width * height && outputmaxpixels > 0) {
@@ -26,7 +26,7 @@ async function gmresize(
                 inputfile,
                 { width, height },
                 { width: outwidth, height: outheight },
-            ])
+            ]),
         );
         // '>'; /** Change dimensions only if image is larger than width or height */
         await new Promise<void>((res, rej) => {

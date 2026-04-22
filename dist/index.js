@@ -25,7 +25,7 @@ async function start(config) {
     if (failurefiles.length) {
         console.error(
             "处理失败的文件：",
-            JSON.stringify(failurefiles, null, 4)
+            JSON.stringify(failurefiles, null, 4),
         );
     } else {
         console.log("处理全部成功!");
@@ -43,14 +43,14 @@ async function handleconvert(files, input, outputextention, output, maxpixels) {
             input,
             outputextention,
             output,
-            maxpixels
+            maxpixels,
         );
         await handleconvert(
             restfiles,
             input,
             outputextention,
             output,
-            maxpixels
+            maxpixels,
         );
         return;
     } else {
@@ -62,7 +62,7 @@ async function handleconvert(files, input, outputextention, output, maxpixels) {
                         input,
                         outputextention,
                         output,
-                        maxpixels
+                        maxpixels,
                     );
                     finishcount++;
                 } catch (e) {
@@ -72,16 +72,14 @@ async function handleconvert(files, input, outputextention, output, maxpixels) {
                 }
                 let 进度 =
                     "processing: " +
-                    `success : ${
-                        (finishcount / filesum) * 100
-                    }% ${finishcount} / ${filesum} ` +
+                    `success : ${(finishcount / filesum) * 100}% ${finishcount} / ${filesum} ` +
                     "failure : " +
                     failcount +
                     "/" +
                     filesum;
                 process.title = 进度;
                 console.log(进度);
-            })
+            }),
         );
     }
 }

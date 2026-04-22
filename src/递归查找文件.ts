@@ -4,7 +4,7 @@ import findfiles from "./findfiles.js";
 
 export default async function 递归查找图片(
     extention: string[],
-    inputdir: string
+    inputdir: string,
 ) {
     /*不区分大小写的正则*/
     /* 匹配正则不要加'g',否则出错一半true,一半false */

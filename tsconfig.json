@@ -1,9 +1,10 @@
 {
     "include": ["./src/*.ts"],
     "compilerOptions": {
+        "rootDir": "./src",
         "outDir": "./dist",
         "sourceMap": false,
-        "moduleResolution": "node",
+        "moduleResolution": "nodenext",
         "pretty": true,
         "resolveJsonModule": true,
         "declaration": true,
@@ -13,7 +14,7 @@
         "removeComments": true,
         "allowJs": true,
         "target": "esnext",
-        "module": "esnext",
+        "module": "NodeNext",
         "strict": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,

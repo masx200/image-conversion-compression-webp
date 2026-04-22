@@ -5,5 +5,5 @@ declare function gmresize(
     outfile: string,
     width: number,
     height: number,
-    outputmaxpixels: number
+    outputmaxpixels: number,
 ): Promise<void>;

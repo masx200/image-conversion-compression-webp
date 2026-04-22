@@ -3,5 +3,5 @@ export default function resizeimage(
     inputdir: string,
     outputextention: string,
     outputdir: string,
-    outputmaxpixels: number
+    outputmaxpixels: number,
 ): Promise<void>;

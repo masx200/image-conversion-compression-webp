@@ -35,13 +35,13 @@ async function start(config: IMAGECONFIG) {
         input,
         outputextention,
         output,
-        maxpixels
+        maxpixels,
     );
 
     if (failurefiles.length) {
         console.error(
             "处理失败的文件：",
-            JSON.stringify(failurefiles, null, 4)
+            JSON.stringify(failurefiles, null, 4),
         );
     } else {
         console.log("处理全部成功!");
@@ -55,7 +55,7 @@ async function handleconvert(
     input: string,
     outputextention: string,
     output: string,
-    maxpixels: number
+    maxpixels: number,
 ) {
     //拆分成几百个文件依次处理
 
@@ -71,7 +71,7 @@ async function handleconvert(
             input,
             outputextention,
             output,
-            maxpixels
+            maxpixels,
         );
 
         await handleconvert(
@@ -80,7 +80,7 @@ async function handleconvert(
             input,
             outputextention,
             output,
-            maxpixels
+            maxpixels,
         );
 
         return;
@@ -93,7 +93,7 @@ async function handleconvert(
                         input,
                         outputextention,
                         output,
-                        maxpixels
+                        maxpixels,
                     );
                     finishcount++;
                 } catch (e) {
@@ -114,7 +114,7 @@ async function handleconvert(
 
                 process.title = 进度;
                 console.log(进度);
-            })
+            }),
         );
     }
 }

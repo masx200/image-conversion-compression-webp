@@ -1,7 +1,7 @@
 export function shouldresize(
     width: number,
     height: number,
-    outputmaxpixels: number
+    outputmaxpixels: number,
 ) {
     return (
         typeof outputmaxpixels === "number" &&

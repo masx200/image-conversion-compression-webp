@@ -14,7 +14,7 @@ async function gmresize(inputfile, outfile, width, height, outputmaxpixels) {
                 inputfile,
                 { width, height },
                 { width: outwidth, height: outheight },
-            ])
+            ]),
         );
         await new Promise((res, rej) => {
             gm(inputfile)

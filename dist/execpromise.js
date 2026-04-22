@@ -9,7 +9,7 @@ export default function execpromise(cmd, args) {
                         error,
                         stdout,
                         stderr,
-                    })
+                    }),
                 );
             } else {
                 return res({ stdout, stderr });

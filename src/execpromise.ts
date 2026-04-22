@@ -9,7 +9,7 @@ export interface EXECERROR {
 
 export default function execpromise(
     cmd: string,
-    args: string[]
+    args: string[],
 ): Promise<{ stdout: string; stderr: string }> {
     return new Promise((res, rej) => {
         execFile(cmd, args, {}, function (error, stdout, stderr) {
@@ -19,7 +19,7 @@ export default function execpromise(
                         error,
                         stdout,
                         stderr,
-                    })
+                    }),
                 );
             } else {
                 /*有的程序会往标准错误输出里写入*/

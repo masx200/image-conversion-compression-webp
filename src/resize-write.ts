@@ -13,7 +13,7 @@ export default async function resizewrite(
     width: number,
     height: number,
 
-    outputmaxpixels: number
+    outputmaxpixels: number,
 ): Promise<void> {
     if (shouldresize(width, height, outputmaxpixels)) {
         const tempname1 = gettempjpgfilepath();
@@ -23,7 +23,7 @@ export default async function resizewrite(
                 tempname1,
                 width,
                 height,
-                outputmaxpixels
+                outputmaxpixels,
             );
             await img2webp(tempname1, outfile);
         } catch (e) {
