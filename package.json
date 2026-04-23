@@ -20,7 +20,7 @@
         "@types/fs-extra": "^11.0.1",
         "@types/gm": "^1.18.7",
         "@types/node": "^25.6.0",
-        "@types/uuid": "^9.0.1",
+        "@types/uuid": "^11.0.0",
         "find": "^0.3.0",
         "fs-extra": "^11.1.0",
         "gm": "^1.23.1",
