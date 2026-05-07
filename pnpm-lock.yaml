@@ -31,7 +31,7 @@ importers:
         version: 0.3.0
       fs-extra:
         specifier: ^11.1.0
-        version: 11.3.4
+        version: 11.3.5
       gm:
         specifier: ^1.23.1
         version: 1.25.1
@@ -96,8 +96,8 @@ packages:
   find@0.3.0:
     resolution: {integrity: sha512-iSd+O4OEYV/I36Zl8MdYJO0xD82wH528SaCieTVHhclgiYNe9y+yPKSwK+A7/WsmHL1EZ+pYUJBXWTL5qofksw==}
 
-  fs-extra@11.3.4:
-    resolution: {integrity: sha512-CTXd6rk/M3/ULNQj8FBqBWHYBVYybQ3VPBw0xGKFe3tuH7ytT6ACnvzpIQ3UZtB8yvUKC2cXn1a+x+5EVQLovA==}
+  fs-extra@11.3.5:
+    resolution: {integrity: sha512-eKpRKAovdpZtR1WopLHxlBWvAgPny3c4gX1G5Jhwmmw4XJj0ifSD5qB5TOo8hmA0wlRKDAOAhEE1yVPgs6Fgcg==}
     engines: {node: '>=14.14'}
 
   gm@1.25.1:
@@ -213,7 +213,7 @@ snapshots:
     dependencies:
       traverse-chain: 0.1.0
 
-  fs-extra@11.3.4:
+  fs-extra@11.3.5:
     dependencies:
       graceful-fs: 4.2.11
       jsonfile: 6.2.1
