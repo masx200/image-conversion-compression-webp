@@ -40,7 +40,7 @@ importers:
         version: 6.0.3
       uuid:
         specifier: ^14.0.0
-        version: 14.0.0
+        version: 14.0.1
     devDependencies:
       prettier:
         specifier: ^3.1.0
@@ -155,8 +155,8 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
-  uuid@14.0.0:
-    resolution: {integrity: sha512-Qo+uWgilfSmAhXCMav1uYFynlQO7fMFiMVZsQqZRMIXp0O7rR7qjkj+cPvBHLgBqi960QCoo/PH2/6ZtVqKvrg==}
+  uuid@14.0.1:
+    resolution: {integrity: sha512-6ZxzVpzDXDa3bJWaHilVayA+BH/1zmxCJoVgvmqJnid/gPoKHxUrS/aC/T6LGQtNHT+XHG9fXPJB4d+IrU30Ew==}
     hasBin: true
 
   which@2.0.2:
@@ -262,7 +262,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  uuid@14.0.0: {}
+  uuid@14.0.1: {}
 
   which@2.0.2:
     dependencies:
